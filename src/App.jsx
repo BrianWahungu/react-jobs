@@ -16,7 +16,7 @@ const App = () => {
   // Add New Job
 
   const addJob = async (newJob) => {
-    const res = await fetch('https://api.npoint.io/eece4f58692932709f82/api/jobs', {
+    const res = await fetch('/api/jobs', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -29,7 +29,7 @@ const App = () => {
   // Delete Job
 
   const deleteJob = async (id) => {
-    const res = await fetch(`https://api.npoint.io/eece4f58692932709f82/api/jobs/${id}`, {
+    const res = await fetch(`/api/jobs/${id}`, {
       method: 'DELETE',
     });
     return;
@@ -38,7 +38,7 @@ const App = () => {
   // Update Job
 
   const updateJob = async (job) => {
-    const res = await fetch(`https://api.npoint.io/eece4f58692932709f82/api/jobs/${job.id}`, {
+    const res = await fetch(`/api/jobs/${job.id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
